@@ -8,15 +8,11 @@ import Homepage from './Pages/homepage/Homepage.component'
 import ShopPage from './Pages/shop/Shop.component'
 import SignInAndSignUpPage from './Pages/sign-in-and-sign-up/sign-in-and-sign-up.component'
 import CheckoutPage from './Pages/checkout/checkout.component'
-
 import Header from './components/header/header.component'
-
-
 import { auth, createUserProfileDocument } from './firebase/firebase.utils'
 import { setCurrentUser } from './redux/user/user.actions'
 import { createStructuredSelector } from 'reselect'
 import { selectCurrentUser } from './redux/user/user.selector'
-
 class App extends Component {
   unsubscribeFromAuth = null
   componentDidMount() {
@@ -49,6 +45,7 @@ class App extends Component {
         <Route path='/shop' component={ShopPage} />
         <Route path='/checkout' component={CheckoutPage} />
         <Route path='/signin' render={() => this.props.currentUser ? (<Redirect to='/' />) : <SignInAndSignUpPage />} />
+        
       </Switch>
     </div>;
   }

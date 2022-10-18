@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "firebase": "^7.15.5",
+    "node": "^8.17.0",
     "node-sass": "^4.14.1",
+    "npm3": "^1.1.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.2.0",
