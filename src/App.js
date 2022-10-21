@@ -13,6 +13,7 @@ import { auth, createUserProfileDocument } from './firebase/firebase.utils'
 import { setCurrentUser } from './redux/user/user.actions'
 import { createStructuredSelector } from 'reselect'
 import { selectCurrentUser } from './redux/user/user.selector'
+import Home from './components/Home/Home';
 class App extends Component {
   unsubscribeFromAuth = null
   componentDidMount() {
@@ -43,9 +44,9 @@ class App extends Component {
       <Switch>
         <Route exact path='/' component={Homepage} />
         <Route path='/shop' component={ShopPage} />
+        <Route path='/Home' component={Home} />
         <Route path='/checkout' component={CheckoutPage} />
         <Route path='/signin' render={() => this.props.currentUser ? (<Redirect to='/' />) : <SignInAndSignUpPage />} />
-        
       </Switch>
     </div>;
   }

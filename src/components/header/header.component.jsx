@@ -18,6 +18,9 @@ function Header({ currentUser, hidden }) {
                 <Logo className="logo" />
             </LogoContainer>
             <OptionsContainer>
+            <OptionLink to="/Home">
+                    HOME
+                </OptionLink>
                 <OptionLink to="/shop">
                     SHOP
                 </OptionLink>
